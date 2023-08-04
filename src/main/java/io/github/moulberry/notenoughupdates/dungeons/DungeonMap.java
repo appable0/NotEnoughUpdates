@@ -1137,6 +1137,7 @@ public class DungeonMap {
 		if (colourMap.length != 128) return;
 		if (colourMap[0].length != 128) return;
 		this.colourMap = colourMap;
+		DungeonMapScale scale = new DungeonMapScale(colourMap);
 
 		boolean searchForPlayers = false;
 		if (System.currentTimeMillis() - lastClearCache > 1000) {
